@@ -1,0 +1,17 @@
+.header{
+  width: 100%;
+  height: 150px;
+  background: #FFD54F;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+}
+.pre-button{
+  float: none;
+}
+.next-button{
+  float: right;
+}
