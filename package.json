@@ -6,13 +6,12 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/BerkanSezer/BioSoft-electronJS",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "BioSoft",
+    "Biology Software",
+    "Hacettepe University"
   ],
   "author": "Biosoft",
   "license": "CC0-1.0",
