@@ -58,4 +58,66 @@ body{
 /*page-3*/
 /*page-3 end*/
 /*page-4*/
+.prokaryote-cell{
+  background: url("../img/prokaryote.jpg") no-repeat;
+  width: auto;
+  height: 400px;
+  background-size: contain;
+
+}
+.eukaryote-cell{
+  background: url("../img/eukaryote.jpg"),no-repeat;
+  width: auto;
+  height: 400px;
+  background-size: contain;
+
+}
 /*page-4 end*/
+/*page-5*/
+.warning-image{
+  background: url("./warning.svg"),no-repeat,center;
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin: 4px 6px 4px 10px;
+}
+.organelles-cell{
+  background: url("../img/organelles/Untitled-1.jpg");
+}
+.endoplazmik_retikulum{
+  background: url("../img/organelles/endoplazmik_retikulum.jpg");
+}
+.golgi_device{
+  background: url("../img/organelles/golgi_aygiti.jpg");
+}
+.cell-wall{
+  background: url("../img/organelles/hucre_duvari.jpg");
+}
+.kloroplast{
+  background: url("../img/organelles/kloroplast.jpg");
+}
+.vacuoles{
+  background: url("../img/organelles/koful.jpg");
+}
+.lizozom{
+  background: url("../img/organelles/lizozom.jpg");
+}
+.lokoplast{
+  background: url("../img/organelles/lokoplast.jpg");
+}
+.sentrozom{
+  background: url("../img/organelles/sentrozom.jpg");
+}
+.ribozom{
+  background: url("../img/organelles/ribozom.jpg");
+}
+.organelles-image{
+  width: 500px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*page-5 end*/
+/*page-6*/
+/*page-6 end*/
