@@ -22,6 +22,8 @@ $( document ).ready(function() {
     $("#page-" + pageCounter).show();
     if (pageCounter === 7) {
       dragNDropGame();
+    }else if (pageCounter === 1) {
+      questionGame();
     }
   }
 
@@ -149,6 +151,153 @@ $( document ).ready(function() {
         opacity: 1
       });
     }
+  }
+
+  function questionGame() {
+
+    var data = {
+      "questions" : [
+        {
+          "number": "1",
+          "question": "Aşağıda verilen özelliklerden hangisi prokaryot ve ökaryot hücreler arasındaki ayırt edici özelliktir?",
+          "a": "A)	DNA taşıma",
+          "b": "B)	Zarla çevrili çekirdeğe sahip olma",
+          "c": "C)	Hücre duvarına sahip olma",
+          "d": "D)	Bölünebilme",
+          "e": "E)	Protein sentezi yapabilme",
+          "trueAnswer": "c"
+        },
+        {
+          "number": "2",
+          "question": "Aşağıda verilen yapılardan hangisi prokaryot yapılı bir hücrede bulunmaz?",
+          "a": "A)	Halkasal formda bir DNA",
+          "b": "B)	Ribozom organeli",
+          "c": "C)	Hücre zarı",
+          "d": "D)	Hücre duvarı",
+          "e": "E)	Çekirdekçik",
+          "trueAnswer": "e"
+        },
+        {
+          "number": "3",
+          "question": "Hücre zarının yapısını açıklayan ve günümüzde kabul edilen görüş aşağıdakilerden hangisidir?",
+          "a": "A)	Birim zar modeli",
+          "b": "B)	Çift katlı zar modeli",
+          "c": "C)	Akıcı mozaik zar modeli",
+          "d": "D)	Sandviç modeli",
+          "e": "E)	Dinamik zar modeli",
+          "trueAnswer": "c"
+        },
+        {
+          "number": "4",
+          "question": "Bir hücrenin oksijensiz kalması durumunda faaliyetleri olumsuz olarak etkilenen ilk organel hangisidir?",
+          "a": "A)	Lizozom",
+          "b": "B)	Mitokondri",
+          "c": "C)	Peroksizom",
+          "d": "D)	Ribozom",
+          "e": "E)	Endoplazmik retikulum",
+          "trueAnswer": "b"
+        },
+        {
+          "number": "5",
+          "question": "5.	Aşağıdaki maddelerden hangisi hücre zarından pasif taşıma ile geçemez?",
+          "a": "A)	Su",
+          "b": "B)	Mineral",
+          "c": "C)	Vitamin ",
+          "d": "D)	Amino asit",
+          "e": "E)	Protein",
+          "trueAnswer": "e"
+        },
+        {
+          "number": "6",
+          "question": "Aşağıda verilen hücre organellerinden hangisi zarlı bir yapıya sahip değildir?",
+          "a": "A)	Kontraktil koful",
+          "b": "B)	Sentrozom",
+          "c": "C)	Peroksizom",
+          "d": "D)	Lizozom",
+          "e": "E)	Golgi ayıgıtı",
+          "trueAnswer": "b"
+        },
+        {
+          "number": "7",
+          "question": "Aşağıda verilen organel çiftlerinden hangisinde oksijen tüketimi gerçekleşir?",
+          "a": "A)	Kloroplast-mitokondri",
+          "b": "B)	Lizozom-sentrozom",
+          "c": "C)	Mitokondri-peroksizom",
+          "d": "D)	Golgi aygıtı-ribozom",
+          "e": "E)	Koful-endoplazmik retikulum",
+          "trueAnswer": "c"
+        },
+        {
+          "number": "8",
+          "question": "Aşağıdakilerden hangisi çekirdekçiğin görevleri arasındadır?",
+          "a": "A)	İnorganik maddelerden organik madde sentezi yapar.",
+          "b": "B)	Hücre içindeki zehirleri etkisiz hale getirir.",
+          "c": "C)	Hücre içi sindirim yapar.",
+          "d": "D)	Ribozomların büyük ve küçük birimlerini sentezler.",
+          "e": "E)	Hücreye destek olur ve hücrenin şeklini korur.",
+          "trueAnswer": "d"
+        },
+        {
+          "number": "9",
+          "question": "Proteinlere sarılmış kalıtım materyaline ne ad verilir?",
+          "a": "A)	Plazmit",
+          "b": "B)	Nükleotit",
+          "c": "C)	DNA",
+          "d": "D)	Genom",
+          "e": "E)	Kromatin",
+          "trueAnswer": "e"
+        },
+        {
+          "number": "10",
+          "question": "Aşağıdakilerden hangisinde kontraktil koful bulunabilir?",
+          "a": "A)	Karaciğer hücresi",
+          "b": "B)	Bakteri hücresi",
+          "c": "C)	Bitki hücresi",
+          "d": "D)	Amip hücresi",
+          "e": "E)	Mantar hücresi",
+          "trueAnswer": "d"
+        }
+      ]
+    };
+    var $app = $('#page-1');
+    var $form = $app.find('form');
+    for(var i=0;i<10;i++){
+      $form.append(
+        '<div>' +
+        '<p><b>'+ data.questions[i].number + ' -)'+ data.questions[i].question + '</b></p>' +
+        '<p>\n' +
+        '      <label>' +
+        '        <input value="a" name="question'+ data.questions[i].number +'" type="radio" />' +
+        '        <span>' +data.questions[i].a +'</span>' +
+        '      </label>' +
+        '</p>' +
+        '<p>' +
+        '      <label>' +
+        '        <input value="b" name="question'+ data.questions[i].number +'" type="radio" />' +
+        '        <span>' +data.questions[i].b +'</span>' +
+        '      </label>' +
+        '</p>' +
+        '<p>' +
+        '      <label>' +
+        '        <input value="c" name="question'+ data.questions[i].number +'" type="radio" />' +
+        '        <span>' +data.questions[i].c +'</span>' +
+        '      </label>' +
+        '</p>' +
+        '<p>' +
+        '      <label>' +
+        '        <input value="d" name="question'+ data.questions[i].number +'" type="radio" />' +
+        '        <span>' +data.questions[i].d +'</span>' +
+        '      </label>' +
+        '</p>' +
+        '<p>' +
+        '      <label>' +
+        '        <input value="e" name="question'+ data.questions[i].number +'" type="radio"  />' +
+        '        <span>' +data.questions[i].e +'</span>' +
+        '      </label>' +
+        '</p>' +
+        '</div>');
+    }
+
   }
 
 
