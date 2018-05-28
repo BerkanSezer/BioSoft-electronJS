@@ -14,13 +14,17 @@ $( document ).ready(function() {
     if (pageCounter !== 1){
       pageCounter --;
       pageSwicher(pageCounter);
-
     }
   });
+
   function pageSwicher(pageCounter) {
     $(".page").hide();
     $("#page-" + pageCounter).show();
+    if (pageCounter === 7) {
+      dragNDropGame();
+    }
   }
+
   var organelles = [
     {
       name:'Ribozom',
@@ -30,8 +34,25 @@ $( document ).ready(function() {
       name: 'Mitokondri',
       type: 'all'
     },
+
+    {
+      name: 'Plastitler',
+      type: 'plant'
+    },
+    {
+      name: 'Hücre Çeperi',
+      type: 'plant'
+    },
     {
       name: 'Golgi Cisimciği',
+      type: 'all'
+    },
+    {
+      name: 'Çekirdek',
+      type: 'all'
+    },
+    {
+      name: 'Periksizom',
       type: 'all'
     },
     {
@@ -51,31 +72,18 @@ $( document ).ready(function() {
       type: 'all'
     },
     {
-      name: 'Çekirdek',
-      type: 'all'
-    },
-    {
-      name: 'Periksizom',
-      type: 'all'
-    },
-    {
-      name: 'Plastitler',
-      type: 'plant'
-    },
-    {
-      name: 'Hücre Çeperi',
-      type: 'plant'
-    },
-    {
       name: 'Sentrozom',
       type: 'animal'
     } ];
 
 
   var correctCards = 0;
-  $( init );
+  // $( init );
 
-  function init() {
+  function dragNDropGame() {
+    console.log('run');
+    $('#cardPile').children().remove();
+    $('#cardSlots').children('.content-list').remove();
     $('#successMessage').hide();
     $('#successMessage').css( {
       left: '580px',
@@ -86,21 +94,11 @@ $( document ).ready(function() {
 
     correctCards = 0;
     for ( var i=0; i<12; i++ ) {
-      $('<div class="col-sm-2">' + organelles[i].name + '</div>').data( 'type', organelles[i].type ).appendTo( '#cardPile' ).draggable( {
+      $('<div class="col-sm-2" id="card'+(i+1)+'">' + organelles[i].name + '</div>').data( 'type', organelles[i].type ).appendTo( '#cardPile' ).draggable( {
         containment: '#content',
         stack: '#cardPile div',
         cursor: 'move',
         revert: true
-        // stop: function(event,ui){
-        //   var slotType = $(this).data('type');
-        //   var cardType = ui.draggable.data('type');
-        //   console.log(slotType);
-        //   // var cardType = ui.draggable.data('type');
-        //   $(this).css({
-        //     top: '0px',
-        //     left: '0px'
-        //   });;
-        // }
       } );
     }
     var words = [{
@@ -116,7 +114,7 @@ $( document ).ready(function() {
       type: 'animal'
     }];
     for ( var i=1; i<=3; i++ ) {
-      $('<div class="col-sm-4">' + words[i-1].name + '</div>').data( 'type', words[i-1].type ).appendTo( '#cardSlots' ).droppable( {
+      $('<div class="col-sm-4 content-list" id="'+ words[i-1].type+'">' + '</br></div>').data( 'type', words[i-1].type ).appendTo( '#cardSlots' ).droppable( {
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
@@ -124,36 +122,37 @@ $( document ).ready(function() {
     }
 
   }
-  var height = 80;
+
   function handleCardDrop(event, ui) {
     var slotType = $(this).data('type');
-
     var cardType = ui.draggable.data('type');
-    if (slotType === cardType) {
-      height += 80;
-      $(this).css('height', height + 'px');
 
+    if (slotType === cardType) {
+      $(this).css('height', '320px');
+      ui.draggable.css('position', 'relative');
       ui.draggable.addClass('correct');
       ui.draggable.draggable('disable');
-      ui.draggable.position({
-        of: $(this), my: 'left top', at: 'left top'
-      });
       ui.draggable.draggable('option', 'revert', false);
       correctCards++;
-    }else{
-      console.log('false');
     }
     if (correctCards === 12) {
+      $('#cardPile').remove();
       $('#successMessage').show();
+      $('#successMessage').css({
+        transform: 'translate(-50%,-50%)'
+      });
       $('#successMessage').animate({
-        left: '380px',
-        top: '200px',
+        left: '50%',
+        top: '50%',
         width: '400px',
-        height: '100px',
+        height: '120px',
         opacity: 1
       });
     }
   }
+
+
+  
 
 
 

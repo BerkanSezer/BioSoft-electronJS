@@ -163,55 +163,30 @@ animal-list div.hovered {
 
 /* Add some margin to the page and set a default font and colour */
 
-body {
+/* body {
   margin: 30px;
   font-family: "Georgia", serif;
   line-height: 1.8em;
   color: #333;
-}
-
+} */
 /* Give headings their own font */
-
-h1, h2, h3, h4 {
+/* h1, h2, h3, h4 {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
+} */
 
 /* Main content area */
 
-#content {
+.content {
   margin: 80px 70px;
   text-align: center;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
-
-/* Header/footer boxes */
-
-.wideBox {
-  clear: both;
-  text-align: center;
-  margin: 70px;
-  padding: 10px;
-  background: #ebedf2;
-  border: 1px solid #333;
-}
-
-.wideBox h1 {
-  font-weight: bold;
-  margin: 20px;
-  color: #666;
-  font-size: 1.5em;
-}
-
-/* Slots for final card positions */
-
 #cardSlots {
   margin: 50px auto 0 auto;
   background: #ddf;
 }
-
-/* The initial pile of unsorted cards */
 
 #cardPile {
   margin: 0 auto;
@@ -219,8 +194,6 @@ h1, h2, h3, h4 {
 }
 
 #cardSlots, #cardPile {
-  /* width: 910px;
-  height: 120px; */
   padding: 20px;
   border: 2px solid #333;
   -moz-border-radius: 10px;
@@ -231,12 +204,8 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
 
-/* Individual cards and slots */
-
 #cardSlots div, #cardPile div {
   float: left;
-  /* width: 58px;
-  height: 78px; */
   padding: 10px;
   padding-top: 20px;
   padding-bottom: 0;
@@ -244,7 +213,6 @@ h1, h2, h3, h4 {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  /* margin: 0 0 0 10px; */
   background: #fff;
 }
 
@@ -272,20 +240,24 @@ h1, h2, h3, h4 {
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
-
-/* Individually coloured cards */
-
 #card1.correct { background: red; }
 #card2.correct { background: brown; }
 #card3.correct { background: orange; }
 #card4.correct { background: yellow; }
-#card5.correct { background: green; }
+#card5.correct { background: green; font-size: 13px;}
 #card6.correct { background: cyan; }
 #card7.correct { background: blue; }
-#card8.correct { background: indigo; }
+#card8.correct { background: indigo; font-size: 13px;}
 #card9.correct { background: purple; }
 #card10.correct { background: violet; }
-
+#card11.correct { background: gold; }
+#card12.correct { background: #4d61e0; }
+.correct{
+  width: 120px !important;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 !important;
+}
 
 /* "You did it!" message */
 #successMessage {
