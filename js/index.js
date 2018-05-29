@@ -22,7 +22,7 @@ $( document ).ready(function() {
     $("#page-" + pageCounter).show();
     if (pageCounter === 7) {
       dragNDropGame();
-    }else if (pageCounter === 1) {
+    }else if (pageCounter === 8) {
       questionGame();
     }
   }
@@ -199,7 +199,7 @@ $( document ).ready(function() {
         },
         {
           "number": "5",
-          "question": "5.	Aşağıdaki maddelerden hangisi hücre zarından pasif taşıma ile geçemez?",
+          "question": "Aşağıdaki maddelerden hangisi hücre zarından pasif taşıma ile geçemez?",
           "a": "A)	Su",
           "b": "B)	Mineral",
           "c": "C)	Vitamin ",
@@ -259,37 +259,37 @@ $( document ).ready(function() {
         }
       ]
     };
-    var $app = $('#page-1');
+    var $app = $('#page-8');
     var $form = $app.find('form');
     for(var i=0;i<10;i++){
       $form.append(
-        '<div>' +
+        '<div class="big-question'+ data.questions[i].number + '">' +
         '<p><b>'+ data.questions[i].number + ' -)'+ data.questions[i].question + '</b></p>' +
-        '<p>\n' +
+        '<p class="answer">' +
         '      <label>' +
         '        <input value="a" name="question'+ data.questions[i].number +'" type="radio" />' +
         '        <span>' +data.questions[i].a +'</span>' +
         '      </label>' +
         '</p>' +
-        '<p>' +
+        '<p class="answer">' +
         '      <label>' +
         '        <input value="b" name="question'+ data.questions[i].number +'" type="radio" />' +
         '        <span>' +data.questions[i].b +'</span>' +
         '      </label>' +
         '</p>' +
-        '<p>' +
+        '<p class="answer">' +
         '      <label>' +
         '        <input value="c" name="question'+ data.questions[i].number +'" type="radio" />' +
         '        <span>' +data.questions[i].c +'</span>' +
         '      </label>' +
         '</p>' +
-        '<p>' +
+        '<p class="answer">' +
         '      <label>' +
         '        <input value="d" name="question'+ data.questions[i].number +'" type="radio" />' +
         '        <span>' +data.questions[i].d +'</span>' +
         '      </label>' +
         '</p>' +
-        '<p>' +
+        '<p class="answer">' +
         '      <label>' +
         '        <input value="e" name="question'+ data.questions[i].number +'" type="radio"  />' +
         '        <span>' +data.questions[i].e +'</span>' +
@@ -297,13 +297,43 @@ $( document ).ready(function() {
         '</p>' +
         '</div>');
     }
+    $app.find('.btn-submit').on('click',function () {
+      var userAnswerArr = [];
+      var trueAnswerArr = [];
+      for (var i=0;i<10;i++){
+        var a = $('input[name=question'+ (i+1) +']:checked').val();
+        userAnswerArr.push(a);
+        trueAnswerArr.push(data.questions[i].trueAnswer);
+      }
+      var trueSide = 0;
+      var falseSide = 0;
+      var undefinedSide = 0;
+      for (var j=0;j<10;j++){
+        if(userAnswerArr[j] === trueAnswerArr[j]){
+          trueSide++;
+        }else if (userAnswerArr[j] === undefined){
+          undefinedSide++;
+        }
+        else{
+          falseSide++;
+        }
+
+      }
+      console.log(trueSide, 'true');
+      console.log(undefinedSide, 'undefined');
+      console.log(falseSide, 'false');
+
+      console.info("info");
+    });
 
   }
 
-
-  
-
-
-
-
 });
+
+// $('#successMessage').hide();
+// $('#successMessage').css( {
+//   left: '580px',
+//   top: '250px',
+//   width: 0,
+//   height: 0
+// } );

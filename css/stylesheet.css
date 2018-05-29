@@ -122,60 +122,6 @@ body{
 /*page-6*/
 /*page-6 end*/
 /*page-7*/
-.circle{
-  border-radius: 50%;
-  width: 400px;
-  height: 400px;
-  background: rgb(34, 34, 31);
-  position: relative;
-  float: left;
-}
-.center{
-  width: 170px;
-  height: 400px;
-  float: left;
-}
-.circle-a{
-  left: 170px;
-}
-.circle-b{
-  left: -170px;
-}
-/* .ui-droppable:hover{
-  border: 2px solid;
-  background: #5a6268;
-} */
-.droppable-element{
-  width: 150px;
-  height: 70px;
-  background: gray;
-}
-animal-list div.hovered {
-  background: #aaa;
-}
-/*page-7 end*/
-/*page-8*/
-/*page-8 end*/
-/*page-9*/
-/*page-9 end*/
-/*page-10*/
-/*page-10 end*/
-
-/* Add some margin to the page and set a default font and colour */
-
-/* body {
-  margin: 30px;
-  font-family: "Georgia", serif;
-  line-height: 1.8em;
-  color: #333;
-} */
-/* Give headings their own font */
-/* h1, h2, h3, h4 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-} */
-
-/* Main content area */
-
 .content {
   margin: 80px 70px;
   text-align: center;
@@ -187,12 +133,10 @@ animal-list div.hovered {
   margin: 50px auto 0 auto;
   background: #ddf;
 }
-
 #cardPile {
   margin: 0 auto;
   background: #ffd;
 }
-
 #cardSlots, #cardPile {
   padding: 20px;
   border: 2px solid #333;
@@ -203,7 +147,6 @@ animal-list div.hovered {
   -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
-
 #cardSlots div, #cardPile div {
   float: left;
   padding: 10px;
@@ -215,26 +158,21 @@ animal-list div.hovered {
   border-radius: 10px;
   background: #fff;
 }
-
 #cardSlots div:first-child, #cardPile div:first-child {
   margin-left: 0;
 }
-
 #cardSlots div.hovered {
   background: #aaa;
 }
-
 #cardSlots div {
   border-style: dashed;
 }
-
 #cardPile div {
   background: #666;
   color: #fff;
   font-size: 24px;
   text-shadow: 0 0 3px #000;
 }
-
 #cardPile div.ui-draggable-dragging {
   -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
@@ -258,8 +196,6 @@ animal-list div.hovered {
   line-height: 70px;
   padding: 0 !important;
 }
-
-/* "You did it!" message */
 #successMessage {
   position: absolute;
   left: 580px;
@@ -277,3 +213,19 @@ animal-list div.hovered {
   box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
   padding: 20px;
 }
+/*page-7 end*/
+/*page-8*/
+#page-1 .answer:hover{
+  background: #b1afaf;
+  border-radius: 10px 15px 15px 10px;
+}
+.btn-submit{
+  margin: 0 auto;
+  width: 40%;
+}
+/*page-8 end*/
+/*page-9*/
+/*page-9 end*/
+/*page-10*/
+/*page-10 end*/
+
