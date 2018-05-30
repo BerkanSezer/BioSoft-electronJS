@@ -50,7 +50,7 @@ body{
 .ingiliz-microscope, .diseksiyon-microscope,
 .light-microscope{
   width: auto;
-  height: 400px;
+  height: 285px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -215,7 +215,7 @@ body{
 }
 /*page-7 end*/
 /*page-8*/
-#page-1 .answer:hover{
+#page-8 .answer:hover{
   background: #b1afaf;
   border-radius: 10px 15px 15px 10px;
 }
@@ -223,8 +223,17 @@ body{
   margin: 0 auto;
   width: 40%;
 }
+#page-8 .modal-dialog{
+  top: 50%;
+  transform: translateY(-50%);
+}
 /*page-8 end*/
 /*page-9*/
+.main-background{
+  background: url(../img/cell-background.jpg) center;
+  background-size: contain;
+  height: 600px;
+}
 /*page-9 end*/
 /*page-10*/
 /*page-10 end*/

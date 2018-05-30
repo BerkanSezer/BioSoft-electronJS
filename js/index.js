@@ -154,6 +154,7 @@ $( document ).ready(function() {
   }
 
   function questionGame() {
+    // $('#resultMessage').hide();
 
     var data = {
       "questions" : [
@@ -297,6 +298,7 @@ $( document ).ready(function() {
         '</p>' +
         '</div>');
     }
+
     $app.find('.btn-submit').on('click',function () {
       var userAnswerArr = [];
       var trueAnswerArr = [];
@@ -317,23 +319,14 @@ $( document ).ready(function() {
         else{
           falseSide++;
         }
-
       }
-      console.log(trueSide, 'true');
-      console.log(undefinedSide, 'undefined');
-      console.log(falseSide, 'false');
-
-      console.info("info");
+      $app.find($('.result-body')).append(
+        '<h2>Tebrikler 10 sorudan '+
+        trueSide +
+        ' tanesini dogru cevapladin!</br> Başarı oranın: % '+
+        (trueSide*10) +
+        '</h2>'
+      );
     });
-
   }
-
 });
-
-// $('#successMessage').hide();
-// $('#successMessage').css( {
-//   left: '580px',
-//   top: '250px',
-//   width: 0,
-//   height: 0
-// } );
