@@ -20,6 +20,14 @@ $( document ).ready(function() {
   function pageSwicher(pageCounter) {
     $(".page").hide();
     $("#page-" + pageCounter).show();
+    if(pageCounter === 1){
+      $('#page-1').find('video').show();
+      console.log('show');
+    }
+    else if (pageCounter === 2){
+      $('#page-1').find('video').trigger('pause');
+      console.log('hidden');
+    }
     if (pageCounter === 9) {
       dragNDropGame();
     }else if (pageCounter === 10) {

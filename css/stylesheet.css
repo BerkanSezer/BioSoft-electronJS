@@ -6,6 +6,22 @@ body{
   height: 50px;
   background: #FFD54F;
 }
+.logo{
+  background: url("../img/logo.png") no-repeat center;
+  background-size: contain;
+  width: 110px;
+  height: 40px;
+  position: relative;
+  top: 5px;
+  float: left;
+}
+.logo-text{
+  float: left;
+  line-height: 46px;
+  left: -25px;
+  font-size: 30px;
+  position: relative;
+}
 .footer{
   position: absolute;
   right: 0;
@@ -117,14 +133,24 @@ body{
 }
 /*page-5 end*/
 /*page-6*/
+#page-6 h1{
+  margin: 30px;
+}
+#page-6 h4{
+  margin: 25px 0;
+}
+
 /*page-6 end*/
-/*page-7*/
+/*page-9*/
 .content {
   margin: 80px 70px;
   text-align: center;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+.content-list{
+  height: 100px;
 }
 #cardSlots {
   margin: 50px auto 0 auto;
@@ -211,8 +237,8 @@ body{
   padding: 20px;
 }
 
-/*page-7 end*/
-/*page-8*/
+/*page-9 end*/
+/*page-10*/
 #page-9 .answer:hover{
   background: #b1afaf;
   border-radius: 10px 15px 15px 10px;
@@ -221,18 +247,20 @@ body{
   margin: 0 auto;
   width: 40%;
 }
-#page-8 .modal-dialog{
+#page-9 .modal-dialog{
   top: 50%;
   transform: translateY(-50%);
 }
-/*page-8 end*/
-/*page-9*/
+/*page-10 end*/
+
+/*page-1*/
 .main-background{
   background: url(../img/cell-background.jpg) center;
   background-size: contain;
   height: 600px;
 }
-/*page-9 end*/
+/*page-10 end*/
+
 /*page-7*/
 #page-7 h1{
   margin: 30px;
