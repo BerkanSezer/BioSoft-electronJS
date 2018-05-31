@@ -308,6 +308,8 @@ $( document ).ready(function() {
     }
 
     $app.find('.btn-submit').on('click',function () {
+      $('.next-button').text('');
+      $('.next-button').html('<a style="color: #fff !important;" href="index.html">BAŞA DÖN</a>');
       var userAnswerArr = [];
       var trueAnswerArr = [];
       for (var i=0;i<10;i++){
@@ -316,7 +318,7 @@ $( document ).ready(function() {
         trueAnswerArr.push(data.questions[i].trueAnswer);
       }
       var trueSide = 0;
-      var falseSide = 0;
+      var falseSide = [];
       var undefinedSide = 0;
       for (var j=0;j<10;j++){
         if(userAnswerArr[j] === trueAnswerArr[j]){
@@ -325,9 +327,11 @@ $( document ).ready(function() {
           undefinedSide++;
         }
         else{
-          falseSide++;
+          console.log(j+1, 'false ans');
+          falseSide.push(j+1);
         }
       }
+      $app.find($('.result-body')).html('');
       $app.find($('.result-body')).append(
         '<h2>Tebrikler 10 sorudan '+
         trueSide +
@@ -335,6 +339,17 @@ $( document ).ready(function() {
         (trueSide*10) +
         '</h2>'
       );
+      if(falseSide.length > 0){
+        var falseAnswers = '';
+        for(var k=0;k<falseSide.length;k++){
+          falseAnswers += (falseSide[k] + " ");
+        }
+        console.log(falseAnswers);
+        $app.find($('.result-body')).append(
+          '<h3>Yanlis Sorular:</h3></br><h3>'+
+          falseAnswers + '</h3>'
+        );
+      }
     });
   }
 });

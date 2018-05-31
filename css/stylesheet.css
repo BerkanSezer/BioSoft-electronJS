@@ -239,7 +239,7 @@ body{
 
 /*page-9 end*/
 /*page-10*/
-#page-9 .answer:hover{
+#page-10 .answer:hover{
   background: #b1afaf;
   border-radius: 10px 15px 15px 10px;
 }
@@ -247,7 +247,7 @@ body{
   margin: 0 auto;
   width: 40%;
 }
-#page-9 .modal-dialog{
+#page-10 .modal-dialog{
   top: 50%;
   transform: translateY(-50%);
 }

@@ -164,6 +164,15 @@
       <div id="page-7" class="page">
         <h1 class="text-center">Hücre Zarından Madde Geçişleri</h1>
         <div class="row">
+          <div class="col-sm-8 m-auto">
+            <div class="panel panel-warning">
+              <div class="warning-image"></div>
+              <div class="panel-heading">Uyarı!</div>
+              <div class="panel-body">Madde Geçişleri Bilgi Edinmek İçin Metinlerin Üzerine Tıklayınız</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
             <table border="1" width="100%">
@@ -601,18 +610,27 @@
 
       <!--page -9 start-->
       <div id="page-9" class="page">
-        <div class="content">
-          <div id="cardPile" class="row"></div>
-          <div id="cardSlots" class="row">
-            <div class="col-sm-4">Bitki</div>
-            <div class="col-sm-4">Her ikisi de</div>
-            <div class="col-sm-4">Hayvan</div>
+        <div class="row">
+          <div class="col-sm-8 m-auto">
+            <div class="panel panel-warning">
+              <div class="warning-image"></div>
+              <div class="panel-heading">Uyarı!</div>
+              <div class="panel-body">Organelleri Sürükleyerek Ait Oldukları Yere Bırakın</div>
+            </div>
           </div>
-
-          <div id="successMessage">
-            <h2>Tebrikler, Şimdi Diğer Etkinliğe Geçebilirsin!</h2>
+          <div class="content">
+            <div id="cardPile" class="row"></div>
+            <div id="cardSlots" class="row">
+              <div class="col-sm-4">Bitki</div>
+              <div class="col-sm-4">Her ikisi de</div>
+              <div class="col-sm-4">Hayvan</div>
+            </div>
+            <div id="successMessage">
+              <h2>Tebrikler, Şimdi Diğer Etkinliğe Geçebilirsin!</h2>
+            </div>
           </div>
         </div>
+
       </div>
       <!--page -9 end-->
       <!--page -10 start-->
@@ -621,7 +639,7 @@
           <form action="">
 
           </form>
-          <button class="btn-submit" data-toggle="modal" data-target="#resultModal">Testi Bitir</button>
+          <button class="btn-submit btn-success btn" data-toggle="modal" data-target="#resultModal">Testi Bitir</button>
 
           <div class="modal fade" id="resultModal" role="dialog">
             <div class="modal-dialog">
@@ -634,7 +652,7 @@
 
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Tamam</button>
+                  <button type="button" class="btn btn-success" data-dismiss="modal">Tamam</button>
                 </div>
               </div>
             </div>
@@ -647,8 +665,8 @@
 
     <footer class="footer">
       <div class="container">
-        <button class="button pre-button btn ">GERİ</button>
-        <button class="button next-button btn ">İLERİ</button>
+        <button class="button pre-button btn btn-info">GERİ</button>
+        <button class="button next-button btn btn-info">İLERİ</button>
       </div>
 
       <div class="card-footer text-center">© 2018 BioSoft | All Rights Reserved</div>
