@@ -20,9 +20,9 @@ $( document ).ready(function() {
   function pageSwicher(pageCounter) {
     $(".page").hide();
     $("#page-" + pageCounter).show();
-    if (pageCounter === 7) {
+    if (pageCounter === 8) {
       dragNDropGame();
-    }else if (pageCounter === 8) {
+    }else if (pageCounter === 9) {
       questionGame();
     }
   }
@@ -260,7 +260,7 @@ $( document ).ready(function() {
         }
       ]
     };
-    var $app = $('#page-8');
+    var $app = $('#page-9');
     var $form = $app.find('form');
     for(var i=0;i<10;i++){
       $form.append(
