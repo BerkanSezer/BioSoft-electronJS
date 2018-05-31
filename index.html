@@ -134,7 +134,7 @@
       <!--page -6 start-->
 
       <div id="page-6" class="page">
-        <h1>Hücrenin Kısımları</h1>
+        <h1 class="text-center">Hücrenin Kısımları</h1>
         <h2>Hücre Zarı</h2>
         <h4>Hücre zarı; hücreyi dış ortamdan ayıran, canlı, esnek, ince, seçici geçirgen bir yapıdır. Hücre zarının özellikleri; </h4>
         <ul>
@@ -153,36 +153,188 @@
           <li>Madde alışverişini sağlar.</li>
           <li>Hücre zarı seçici ve geçirgendir.</li>
         </ul>
-        <h3>Hücre Zarından Madde Geçişleri</h3>
-        <table border="1">
-          <tr>
-            <td>Küçük Moleküllerin Taşınması</td>
-            <td>Büyük Moleküllerin Taşınması</td>
-          </tr>
-          <tr>
-            <td>
-              Pasif Taşıma
-              <ul>
-                <li>Difüzyon</li>
-                <li>Osmoz</li>
-              </ul>
-              Aktif Taşıma
-            </td>
-            <td>
-              Endositoz
-              <ul>
-                <li>Fagositoz</li>
-                <li>Pinositoz</li>
-              </ul>
-              Ekzositoz
-            </td>
-          </tr>
-        </table>
+
       </div>
       <!--page -6 end-->
 
       <!--page -7 start-->
       <div id="page-7" class="page">
+        <h1 class="text-center">Hücre Zarından Madde Geçişleri</h1>
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <table border="1" width="100%">
+              <tr class="first-row">
+                <td><b>Küçük Moleküllerin Taşınması</b></td>
+                <td><b>Büyük Moleküllerin Taşınması</b></td>
+              </tr>
+              <tr class="second-row">
+                <td>
+                  <li><span data-toggle="modal" data-target="#pasiveTasimaModal">Pasif Taşıma</span></li>
+                  <ul>
+                    <li data-toggle="modal" data-target="#difuzyonModal">Difüzyon</li>
+                    <li data-toggle="modal" data-target="#osmozModal">Osmoz</li>
+                  </ul>
+                  <li><span data-toggle="modal" data-target="#activeModal">Aktif Taşıma</span></li>
+                </td>
+                <td>
+                  <li><span data-toggle="modal" data-target="#endositozModal">Endositoz</span></li>
+                  <ul>
+                    <li data-toggle="modal" data-target="#fagositozModal">Fagositoz</li>
+                    <li data-toggle="modal" data-target="#pinositozModal">Pinositoz</li>
+                  </ul>
+                  <li><span data-toggle="modal" data-target="#ekzositozModal">Ekzositoz</span></li>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- Pasif Tasima Modal -->
+        <div class="modal fade" id="pasiveTasimaModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Pasif Taşıma</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Küçük moleküllerin çok yoğun oldukları ortamdan az yoğun oldukları ortama doğru hücre zarından geçişine denir. Hem canlı hem de cansız ortamlarda gerçekleşebilir. Hücrenin ATP harcamasına gerek yoktur. </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Difüzyon Modal -->
+        <div class="modal fade" id="difuzyonModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Difüzyon</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Küçük moleküllerin yüksek yoğunlukta bulundukları ortamdan, düşük yoğunlukta bulundukları ortama doğru yaptıkları yer değiştirme hareketidir.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Osmoz Modal -->
+        <div class="modal fade" id="osmozModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Osmoz</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p></p>
+                <p>Suyun çok yoğun olduğu ortamdan az yoğun olduğu ortama doğru seçici geçirgen zardan geçişidir.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Aktif Tasima Modal -->
+        <div class="modal fade" id="activeModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Aktif Taşıma</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Moleküllerin az yoğun olduğu ortamdan çok yoğun olduğu ortama doğru enerji harcanarak enzim ve taşıyıcı proteinler yardımıyla taşınmasına aktif taşıma denir. </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Endositoz Modal -->
+        <div class="modal fade" id="endositozModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Endositoz</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Büyük moleküllerin hücre zarının içeriye doğru çökmesiyle oluşan cepler yardımıyla enerji harcanarak hücre içine alınmasıdır. Bakteri ve mantar hücrelerinde hücre duvarı endositozu engeller.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fagositoz Modal -->
+        <div class="modal fade" id="fagositozModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Fagositoz</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>Büyük moleküllü katı partiküllerin hücre zarının uzaması işe oluşan yalancı ayaklar yardımıyla hücre içine alınmasıdır. </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pinositoz Modal -->
+        <div class="modal fade" id="pinositozModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Pinositoz</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p></p>
+                <p>Hücre zarındaki porlardan geçemeyecek kadar büyük moleküllü ve suda çözünebilen maddelerin alınmasıdır.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Ekzositoz Modal -->
+        <div class="modal fade" id="ekzositozModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Ekzositoz</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p></p>
+                <p>Hücre içinde bulunan büyük moleküllü maddelerin enerji harcanarak kofullar yardımıyla endositozun tersi bir yöntemle hücre dışına verilmesine ekzositoz denir.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!--page -7 end-->
+
+      <!--page -8 start-->
+      <div id="page-8" class="page">
         <div class="row">
           <div class="col-sm-8 m-auto">
             <div class="panel panel-warning">
@@ -442,10 +594,10 @@
         </div>
 
       </div>
-      <!--page -7 end-->
+      <!--page -8 end-->
 
-      <!--page -8 start-->
-      <div id="page-8" class="page">
+      <!--page -9 start-->
+      <div id="page-9" class="page">
         <div class="content">
           <div id="cardPile" class="row"></div>
           <div id="cardSlots" class="row">
@@ -459,9 +611,9 @@
           </div>
         </div>
       </div>
-      <!--page -8 end-->
-      <!--page -9 start-->
-      <div id="page-9" class="page">
+      <!--page -9 end-->
+      <!--page -10 start-->
+      <div id="page-10" class="page">
         <div class="row">
           <form action="">
 
@@ -486,10 +638,8 @@
           </div>
         </div>
       </div>
-      <!--page -9 end-->
-      <!--page -10 start-->
-      <div id="page-10" class="page">10</div>
       <!--page -10 end-->
+
     </div>
 
     <footer class="footer">

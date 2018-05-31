@@ -210,9 +210,10 @@ body{
   box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
   padding: 20px;
 }
+
 /*page-7 end*/
 /*page-8*/
-#page-8 .answer:hover{
+#page-9 .answer:hover{
   background: #b1afaf;
   border-radius: 10px 15px 15px 10px;
 }
@@ -232,6 +233,23 @@ body{
   height: 600px;
 }
 /*page-9 end*/
-/*page-10*/
-/*page-10 end*/
+/*page-7*/
+#page-7 h1{
+  margin: 30px;
+}
+#page-7 table{
+  font-size: 23px;
+}
+#page-7 table .first-row{
+  height: 80px;
+  text-align: center;
+}
+#page-7 table .second-row{
+  height: 200px;
+}
+#page-7 table .second-row td{
+  padding-left: 40px;
+  line-height: 40px;
+}
+/*page-7 end*/
 
