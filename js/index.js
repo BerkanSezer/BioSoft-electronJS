@@ -22,11 +22,9 @@ $( document ).ready(function() {
     $("#page-" + pageCounter).show();
     if(pageCounter === 1){
       $('#page-1').find('video').show();
-      console.log('show');
     }
     else if (pageCounter === 2){
       $('#page-1').find('video').trigger('pause');
-      console.log('hidden');
     }
     if (pageCounter === 9) {
       dragNDropGame();
@@ -88,10 +86,7 @@ $( document ).ready(function() {
 
 
   var correctCards = 0;
-  // $( init );
-
   function dragNDropGame() {
-    console.log('run');
     $('#cardPile').children().remove();
     $('#cardSlots').children('.content-list').remove();
     $('#successMessage').hide();
@@ -162,7 +157,6 @@ $( document ).ready(function() {
   }
 
   function questionGame() {
-    // $('#resultMessage').hide();
 
     var data = {
       "questions" : [
@@ -327,7 +321,6 @@ $( document ).ready(function() {
           undefinedSide++;
         }
         else{
-          console.log(j+1, 'false ans');
           falseSide.push(j+1);
         }
       }
@@ -344,7 +337,6 @@ $( document ).ready(function() {
         for(var k=0;k<falseSide.length;k++){
           falseAnswers += (falseSide[k] + " ");
         }
-        console.log(falseAnswers);
         $app.find($('.result-body')).append(
           '<h3>Yanlis Sorular:</h3></br><h3>'+
           falseAnswers + '</h3>'
