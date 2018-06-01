@@ -40,10 +40,20 @@ body{
   top: 50%;
   transform: translateY(-50%);
 }
-/*page-1*/
+#page-2 h1,#page-3 h1,#page-4 h1, #page-5 h1, #page-10 h1{
+  margin: 30px 0;
+}
+/*General CSS end*/
 
+/*page-1*/
+.main-background{
+  background: url(../img/cell-background.jpg) center;
+  background-size: contain;
+  height: 600px;
+}
 /*page-1 end*/
-/*page-2*/
+
+/*page-3*/
 .first-microscope{
   background: url("../img/ilk_mikroskop.jpg"),center;
 }
@@ -67,26 +77,66 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
 }
-/*page-2 end*/
-/*page-3*/
 /*page-3 end*/
+
 /*page-4*/
+#page-4 li{
+  font-size: 23px;
+}
+/*page-4 end*/
+
+/*page-5*/
 .prokaryote-cell{
   width: auto;
   height: 350px;
   background: url("../img/prokaryote.jpg") no-repeat top !important;
   background-size: contain !important;
-
 }
 .eukaryote-cell{
   background: url("../img/eukaryote.jpg"),no-repeat top !important;
   width: auto;
   height: 350px;
   background-size: contain !important;
-
 }
-/*page-4 end*/
-/*page-5*/
+/*page-5 end*/
+
+/*page-6*/
+#page-6 h1{
+  margin: 30px;
+}
+
+#page-6 h4{
+  margin: 25px 0;
+}
+/*page-6 end*/
+
+/*page-7*/
+#page-7 h1{
+  margin: 30px;
+}
+#page-7 table{
+  font-size: 23px;
+}
+#page-7 table .first-row{
+  height: 80px;
+  text-align: center;
+}
+#page-7 table .second-row{
+  height: 200px;
+}
+#page-7 table .second-row td{
+  padding-left: 40px;
+  line-height: 40px;
+}
+table li{
+  cursor: pointer;
+}
+table li:hover{
+  background: #b4b4b4;
+}
+/*page-7 end*/
+
+/*page-8*/
 .warning-image{
   background: url("./warning.svg"),no-repeat,center;
   width: 35px;
@@ -131,16 +181,8 @@ body{
   background-repeat: no-repeat;
   background-position: center;
 }
-/*page-5 end*/
-/*page-6*/
-#page-6 h1{
-  margin: 30px;
-}
-#page-6 h4{
-  margin: 25px 0;
-}
+/*page-8 end*/
 
-/*page-6 end*/
 /*page-9*/
 .content {
   margin: 80px 70px;
@@ -236,8 +278,8 @@ body{
   box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
   padding: 20px;
 }
-
 /*page-9 end*/
+
 /*page-10*/
 #page-10 .answer:hover{
   background: #b1afaf;
@@ -253,31 +295,4 @@ body{
 }
 /*page-10 end*/
 
-/*page-1*/
-.main-background{
-  background: url(../img/cell-background.jpg) center;
-  background-size: contain;
-  height: 600px;
-}
-/*page-10 end*/
-
-/*page-7*/
-#page-7 h1{
-  margin: 30px;
-}
-#page-7 table{
-  font-size: 23px;
-}
-#page-7 table .first-row{
-  height: 80px;
-  text-align: center;
-}
-#page-7 table .second-row{
-  height: 200px;
-}
-#page-7 table .second-row td{
-  padding-left: 40px;
-  line-height: 40px;
-}
-/*page-7 end*/
 
